@@ -15,7 +15,7 @@ require 'view/menu.php';
         table-secondary
         align-middle">
             <thead class="table-light">
-                <caption><?php echo $this->mensaje; ?></caption>               
+                <caption><?php echo $this->mensaje; ?></caption>
 
 
                 <tr>
@@ -65,6 +65,7 @@ require 'view/menu.php';
                                     </td>
                                 </tr>';
                 }
+                
                 ?>
             </tbody>
             <tfoot>

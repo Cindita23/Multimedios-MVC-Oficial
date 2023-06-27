@@ -56,7 +56,7 @@
         foreach ($this->grupos as $fila) {
             $grupos = new classGrupos();
             $grupos = $fila;
-            if ($grupos->id == $this->datos->idCarreras) { // Reemplaza $grupoId con el valor específico que deseas seleccionar
+            if ($grupos->id == $this->datos->idCarreras) { 
                 echo '<option value="' . $grupos->id . '" selected>' . $grupos->nombre . '</option>';
             } else {
                 echo '<option value= ' . $grupos->id . '> ' . $grupos->nombre . ' </option>;';

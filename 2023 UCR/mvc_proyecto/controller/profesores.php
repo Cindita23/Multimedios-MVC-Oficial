@@ -30,7 +30,7 @@ class Profesores extends Controller{
     }
 
     function insertarProfesor(){
-        var_dump($_POST);
+        //var_dump($_POST);
         $mensajePersonalizado = new Misc();
 
         if ($this->model->insertarProfesor($_POST)){//todo lo que venga en el POST lo vamos a enviar 

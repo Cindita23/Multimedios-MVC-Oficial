@@ -16,7 +16,7 @@ class ProfesoresModel extends Model{
 
         try {
             //code...
-            $stringSQL = "SELECT * FROM `profesor` order by id DESC;";
+            $stringSQL = "SELECT id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, usuario, idCarreras FROM profesor order by id DESC;";
             $query = $this->db->connect()->query($stringSQL);
 
             while ( $row = $query->fetch()){

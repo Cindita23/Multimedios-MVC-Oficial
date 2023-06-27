@@ -11,9 +11,9 @@
         public $nombre;
         public $apellidopaterno;
         public $apellidomaterno;
-        public $nacionalidad;
-        public $idCarreras;
+        public $nacionalidad;        
         public $usuario;
+        public $idCarreras;
     }
 
 ?>

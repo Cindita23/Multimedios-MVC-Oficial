@@ -64,7 +64,9 @@ require 'view/menu.php';
                                         <a name="editar" id="editar" class="btn btn-primary" href="' . constant('URL') . 'estudiantes/verEstudiantes/' . $datos->id . '" role="button">Editar</a>
                                     </td>
                                 </tr>';
+                                
                 }
+               
                 ?>
             </tbody>
             <tfoot>
