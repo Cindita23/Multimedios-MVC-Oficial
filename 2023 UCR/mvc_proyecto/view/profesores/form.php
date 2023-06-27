@@ -49,7 +49,7 @@
 
 <div class="mb-3">
     <label for="" class="form-label">Carrera</label>
-    <select required class="form-select" name="idCarreras" id="idCarreras">
+    <select required class="form-select" name="idcarreras" id="idcarreras">
         <option value="" selected disabled>Elija la carrera asignada al profesor
         </option>
         <?php

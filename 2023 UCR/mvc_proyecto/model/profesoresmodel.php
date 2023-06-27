@@ -16,7 +16,7 @@ class ProfesoresModel extends Model{
 
         try {
             //code...
-            $stringSQL = "SELECT id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, nacionalidad, usuario, idCarreras FROM profesor order by id DESC;";
+            $stringSQL = "SELECT * FROM profesor order by id DESC;";
             $query = $this->db->connect()->query($stringSQL);
 
             while ( $row = $query->fetch()){
@@ -71,7 +71,7 @@ class ProfesoresModel extends Model{
             fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, 
             nacionalidad, usuario, idCarreras) VALUES ( :id, :cedula, :correoelectronico, :telefono, 
             :telefonocelular, :fechanacimiento, :sexo, :direccion, :nombre, :apellidopaterno, :apellidomaterno,
-             :nacionalidad, :usuario, :idCarreras);';
+             :nacionalidad, :usuario, :idcarreras);';
             $query = $this->db->connect()->prepare($stringSQL);
             $query->execute($datos);
             return true;
@@ -119,10 +119,10 @@ class ProfesoresModel extends Model{
             #nombre='[value-9]',apellidopaterno='[value-10]',apellidomaterno='[value-11]',
             #nacionalidad='[value-12]',usuario='[value-13]',idcarreras='[value-14]' WHERE id='[value-1]'               
             $datos['usuario'] = "Benavides";
-            $stringSQL = 'UPDATE estudiante SET cedula=:cedula,correoelectronico=:correoelectronico,
+            $stringSQL = 'UPDATE profesor SET cedula=:cedula,correoelectronico=:correoelectronico,
                 telefono=:telefono,telefonocelular=:telefonocelular,fechanacimiento=:fechanacimiento,
                 sexo=:sexo,direccion=:direccion,nombre=:nombre,apellidopaterno=:apellidopaterno,
-                apellidomaterno=:apellidomaterno,nacionalidad=:nacionalidad,usuario=:usuario,idCarreras=:idCarreras
+                apellidomaterno=:apellidomaterno,nacionalidad=:nacionalidad,usuario=:usuario,idcarreras=:idcarreras
                  WHERE  id=:id;';
             $query = $this->db->connect()->prepare($stringSQL);
             $query->execute($datos);

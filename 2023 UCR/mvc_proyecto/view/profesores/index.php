@@ -56,7 +56,7 @@ require 'view/menu.php';
                                     <td>' . $datos->sexo . '</td>
                                     <td>' . $datos->direccion . '</td>
                                     <td>' . $datos->nacionalidad . '</td>
-                                    <td>' . $datos->idCarreras . '</td>
+                                    <td>' . $datos->idcarreras . '</td>
                                     <td>' . $datos->usuario . '</td>
                                     <td>
                                         <a name="eliminar" id="eliminar" class="btn btn-danger" href="' . constant('URL') . 'profesores/eliminarProfesor/' . $datos->id . '" role="button">Eliminar</a>

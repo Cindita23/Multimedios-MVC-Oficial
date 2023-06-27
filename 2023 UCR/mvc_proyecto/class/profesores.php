@@ -13,7 +13,7 @@
         public $apellidomaterno;
         public $nacionalidad;        
         public $usuario;
-        public $idCarreras;
+        public $idcarreras;
     }
 
 ?>
