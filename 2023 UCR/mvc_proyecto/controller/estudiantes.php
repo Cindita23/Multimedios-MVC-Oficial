@@ -20,79 +20,79 @@ class Estudiantes extends Controller{
     }
     
 
-    // function crear(){   //para ver la vista                   
-    //     $this->view->datos = [];
-    //     $this->view->mensaje = "Crear Estudiantes";
-    //     $this->view->render('estudiantes/crear');
-    // }
+    function crear(){   //para ver la vista                   
+        $this->view->datos = [];
+        $this->view->mensaje = "Crear Estudiantes";
+        $this->view->render('estudiantes/crear');
+    }
 
-    // function insertarEstudiante(){
-    //     //var_dump($_POST);
-    //     $mensajePersonalizado = new Misc();
+    function insertarEstudiante(){
+        //var_dump($_POST);
+        $mensajePersonalizado = new Misc();
 
-    //     if ($this->model->insertarEstudiante($_POST)){//todo lo que venga en el POST lo vamos a enviar 
-    //         $mensajeResultado = $mensajePersonalizado->mensajeExitosoInsertar;
-    //     }else{
-    //         $mensajeResultado = $mensajePersonalizado->mensajeExitosoInsertar;
-    //     }
-    //     $this->view->mensajeResultado = $mensajeResultado;        
-    //     $this->render();
-    // }
+        if ($this->model->insertarEstudiante($_POST)){//todo lo que venga en el POST lo vamos a enviar 
+            $mensajeResultado = $mensajePersonalizado->mensajeExitosoInsertar;
+        }else{
+            $mensajeResultado = $mensajePersonalizado->mensajeExitosoInsertar;
+        }
+        $this->view->mensajeResultado = $mensajeResultado;        
+        $this->render();
+    }
 
-    // function detalle(){                      
-    //     $this->view->datos = [];
-    //     $this->view->mensaje = "Detalles de los Estudiantes";
-    //     $this->view->render('estudiantes/detalle');
-    // }
+    function detalle(){                      
+        $this->view->datos = [];
+        $this->view->mensaje = "Detalles de los Estudiantes";
+        $this->view->render('estudiantes/detalle');
+    }
 
-    // ///////////////////////////////////////////////////////////tercer video 
+    ///////////////////////////////////////////////////////////tercer video 
     
-    // //recibe los parámetros, no sabe cuales, pero si no vienen que los inicialice en blanco   
-    // function verEstudiantes( $param = null ){        
-    //     $id = $param[0];//obtiene id a través de los parámetros 
+    //recibe los parámetros, no sabe cuales, pero si no vienen que los inicialice en blanco   
+    function verEstudiantes( $param = null ){        
+        $id = $param[0];//obtiene id a través de los parámetros 
 
-    //     $datos = $this->model->verEstudiantes($id);   //trae toda la info      
-    //     $this->view->datos = $datos; //enviamos los datos del curso consultado 
-    //     $this->view->mensaje = "Detalle Estudiante";
-    //     $this->view->render('estudiantes/detalle');//carga la info 
-    // }
+        $datos = $this->model->verEstudiantes($id);   //trae toda la info      
+        $this->view->datos = $datos; //enviamos los datos del curso consultado 
+        $this->view->mensaje = "Detalle Estudiante";
+        $this->view->render('estudiantes/detalle');//carga la info 
+    }
 
-    // //actualizarcurso
-    // function actualizarEstudiante(){
-    //     //var_dump($_POST);
-    //     $mensajePersonalizado = new Misc();
+    //actualizarcurso
+    function actualizarEstudiante(){
+        //var_dump($_POST);
+        $mensajePersonalizado = new Misc();
 
-    //     if ($this->model->actualizarEstudiante($_POST)){
+        if ($this->model->actualizarEstudiante($_POST)){
 
-    //         $datos = new classEstudiantes();            
+            $datos = new classEstudiantes();            
 
-    //         foreach ($_POST as $key => $value) {
-    //             # code...
-    //             $datos->$key= $value;
-    //         }
+            foreach ($_POST as $key => $value) {
+                # code...
+                $datos->$key= $value;
+            }
 
-    //         $mensajeResultado = $mensajePersonalizado->mensajeActualizarExitoso;
-    //     }else{
-    //         $mensajeResultado = $mensajePersonalizado->mensajeActualizarError; 
-    //     }
-    //     $this->view->datos = $datos;
-    //     $this->view->mensaje = "Detalle Estudiante";
-    //     $this->view->mensajeResultado = $mensajeResultado;        
-    //     $this->view->render('estudiantes/detalle');
-    // }    
+            $mensajeResultado = $mensajePersonalizado->mensajeActualizarExitoso;
+        }else{
+            $mensajeResultado = $mensajePersonalizado->mensajeActualizarError; 
+        }
+        $this->view->datos = $datos;
+        $this->view->mensaje = "Detalle Estudiante";
+        $this->view->mensajeResultado = $mensajeResultado;        
+        $this->view->render('estudiantes/detalle');
+    }    
 
-    // //eliminarcurso
-    // function eliminarEstudiante( $param = null ){   
-    //     $id = $param[0];
-    //     $mensajePersonalizado = new Misc();
+    //eliminarcurso
+    function eliminarEstudiante( $param = null ){   
+        $id = $param[0];
+        $mensajePersonalizado = new Misc();
 
-    //     if ($this->model->eliminarEstudiante($id)){
-    //         $mensajeResultado = $mensajePersonalizado->mensajeEliminarExitoso; 
-    //     }else{
-    //         $mensajeResultado = $mensajePersonalizado->mensajeEliminarError;
-    //     }
-    //     $this->view->mensajeResultado = $mensajeResultado;        
-    //     $this->render();
-    // }
+        if ($this->model->eliminarEstudiante($id)){
+            $mensajeResultado = $mensajePersonalizado->mensajeEliminarExitoso; 
+        }else{
+            $mensajeResultado = $mensajePersonalizado->mensajeEliminarError;
+        }
+        $this->view->mensajeResultado = $mensajeResultado;        
+        $this->render();
+    }
 
 }

@@ -43,18 +43,18 @@ require 'view/menu.php';
                     # code..
                     echo ' <tr class="table-secondary" >
                                     <td scope="row">' . $datos->id . '</td>
-                                    <td>' . $datos->cedula . '</td>
-                                    <td>' . $datos->nombre . '</td>
-                                    <td>' . $datos->apellidopaterno . '</td>
-                                    <td>' . $datos->apellidomaterno . '</td>                                    
+                                    <td>' . $datos->cedula . '</td>                                    
                                     <td>' . $datos->correoelectronico . '</td>
                                     <td>' . $datos->telefono . '</td>
                                     <td>' . $datos->telefonocelular . '</td>
                                     <td>' . $datos->fechanacimiento . '</td>
                                     <td>' . $datos->sexo . '</td>
                                     <td>' . $datos->direccion . '</td>
+                                    <td>' . $datos->nombre . '</td>
+                                    <td>' . $datos->apellidopaterno . '</td>
+                                    <td>' . $datos->apellidomaterno . '</td>
                                     <td>' . $datos->nacionalidad . '</td>
-                                    <td>' . $datos->idcarreras . '</td>
+                                    <td>' . $datos->idCarreras . '</td>
                                     <td>' . $datos->usuario . '</td>
                                     <td>
                                         <a name="eliminar" id="eliminar" class="btn btn-danger" href="' . constant('URL') . 'estudiantes/eliminarEstudiante/' . $datos->id . '" role="button">Eliminar</a>

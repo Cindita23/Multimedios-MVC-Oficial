@@ -10,6 +10,6 @@
     
 
     //URL del proyecto web 
-    define('URL', 'http://localhost/2023%20UCR/mvc_proyecto/');//para que el sepa donde tiene que estar
+    define('URL', 'http://localhost/Multimedios-MVC-Oficial/2023%20UCR/mvc_proyecto/');//para que el sepa donde tiene que estar
 
 ?>
