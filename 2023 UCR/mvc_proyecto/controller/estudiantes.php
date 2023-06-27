@@ -27,13 +27,13 @@ class Estudiantes extends Controller{
     }
 
     function insertarEstudiante(){
-        //var_dump($_POST);
+        var_dump($_POST);
         $mensajePersonalizado = new Misc();
 
         if ($this->model->insertarEstudiante($_POST)){//todo lo que venga en el POST lo vamos a enviar 
             $mensajeResultado = $mensajePersonalizado->mensajeExitosoInsertar;
         }else{
-            $mensajeResultado = $mensajePersonalizado->mensajeExitosoInsertar;
+            $mensajeResultado = $mensajePersonalizado->mensajeErrorInsertar;
         }
         $this->view->mensajeResultado = $mensajeResultado;        
         $this->render();

@@ -42,7 +42,7 @@ class EstudiantesModel extends Model{
             $datos['usuario'] = "Benavides";
             $datos['idCarreras'] = "12";
             $stringSQL = 'INSERT INTO estudiante(id, cedula, correoelectronico, telefono, telefonocelular, 
-            fechanacimiento, sexo, direccion, direccion, nombre, apellidopaterno, apellidomaterno, 
+            fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, 
             nacionalidad, idCarreras, usuario) VALUES ( :id, :cedula, :correoelectronico, :telefono, 
             :telefonocelular, :fechanacimiento, :sexo, :direccion, :nombre, :apellidopaterno, :apellidomaterno,
              :nacionalidad, :idCarreras, :usuario);';
@@ -57,12 +57,11 @@ class EstudiantesModel extends Model{
         }
     }
 
-
-    /////////////////////////////////////tercer video 
     public function verEstudiantes($id){
-        //var_dump($_SESSION);
+        //var_dump($id);
         try {
-            $item = new classEstudiantes();//trae todos los atributos de curso
+            $item = new classEstudiantes();
+            //trae todos los atributos de curso
             //code...
             $stringSQL = "Select * FROM `estudiante` where id=:id;";
             $query = $this->db->connect()->prepare($stringSQL);//se prepara el sql con lo que viene, con el atributo id
@@ -75,7 +74,9 @@ class EstudiantesModel extends Model{
                    // $_SESSION['autenticado'] = true;
                 }
             }
+            //var_dump($item);
             return $item;
+            
         } catch (PDOException $th) {
             //throw $th;
             return [];
@@ -84,13 +85,14 @@ class EstudiantesModel extends Model{
     
       //actualizarcurso
       public function actualizarEstudiante($datos){
-        //            var_dump($datos);
+        //var_dump($datos);
         try {
             //code...
             #UPDATE estudiante SET cedula='[value-2]',correoelectronico='[value-3]',telefono='[value-4]',telefonocelular='[value-5]',fechanacimiento='[value-6]',sexo='[value-7]',direccion='[value-8]',nombre='[value-9]',apellidopaterno='[value-10]',apellidomaterno='[value-11]',nacionalidad='[value-12]',idCarreras='[value-13]',usuario='[value-14]' WHERE  id='[value-1]'                    
             $datos['usuario'] = "Prof Mario";
+            $datos['idCarreras'] = "13";
             $stringSQL = 'UPDATE estudiante SET cedula=:cedula,correoelectronico=:correoelectronico,
-                telefono=:telefono,telefonocelular=telefonocelular,fechanacimiento=:fechanacimiento,
+                telefono=:telefono,telefonocelular=:telefonocelular,fechanacimiento=:fechanacimiento,
                 sexo=:sexo,direccion=:direccion,nombre=:nombre,apellidopaterno=:apellidopaterno,
                 apellidomaterno=:apellidomaterno,nacionalidad=:nacionalidad,idCarreras=:idCarreras,
                 usuario=:usuario WHERE  id=:id;';
