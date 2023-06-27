@@ -48,9 +48,9 @@
         <a class="nav-link dropdown-toggle fw-bold aumentarLetra" href="#" data-bs-toggle="dropdown" role="button"
             aria-haspopup="true" aria-expanded="false">Profesores</a>
         <div class="dropdown-menu bg-dark">
-            <a class="dropdown-item text-white" href="crearProfesor.html">Agregar Profesor</a>
+            <a class="dropdown-item text-white" href="<?php echo constant('URL');?>profesores/crear">Agregar Profesor</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-white" href="listarProfesores.html">Lista Profesores</a>
+            <a class="dropdown-item text-white" href="<?php echo constant('URL');?>profesores">Lista Profesores</a>
         </div>
         </li>
     </ul>

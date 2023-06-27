@@ -4,11 +4,11 @@
 </div>
 <div class="mb-3">
     <label for="" class="form-label">Cédula</label>
-    <input required type="text" class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Ingrese la cédula del estudiante" value="<?php echo isset($this->datos->cedula) ? $this->datos->cedula : ""; ?>">
+    <input required type="text" class="form-control" name="cedula" id="cedula" aria-describedby="helpId" placeholder="Ingrese la cédula del profesor" value="<?php echo isset($this->datos->cedula) ? $this->datos->cedula : ""; ?>">
 </div>
 <div class="mb-3">
     <label for="" class="form-label">Nombre</label>
-    <input required type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre del estudiante" value="<?php echo isset($this->datos->nombre) ? $this->datos->nombre : ""; ?>">
+    <input required type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre del profesor" value="<?php echo isset($this->datos->nombre) ? $this->datos->nombre : ""; ?>">
 </div>
 <div class="mb-3">
     <label for="" class="form-label">Apellido paterno</label>
@@ -50,7 +50,7 @@
 <div class="mb-3">
     <label for="" class="form-label">Carrera</label>
     <select required class="form-select" name="idCarreras" id="idCarreras">
-        <option value="" selected disabled>Elija la carrera asignada al estudiante
+        <option value="" selected disabled>Elija la carrera asignada al profesor
         </option>
         <?php
         foreach ($this->grupos as $fila) {
