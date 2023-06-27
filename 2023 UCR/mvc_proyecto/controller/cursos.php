@@ -78,7 +78,7 @@ class Cursos extends Controller{
         $this->view->datos = $datos;
         $this->view->mensaje = "Detalle Curso";
         $this->view->mensajeResultado = $mensajeResultado;        
-        $this->view->render('cursos/detalle');
+        $this->render();
     }    
 
     //eliminarcurso
