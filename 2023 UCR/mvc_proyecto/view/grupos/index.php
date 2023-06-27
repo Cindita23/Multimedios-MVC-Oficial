@@ -3,7 +3,7 @@
     require 'view/menu.php';
 ?>
 <div class="container-fluid" id="contendorprincipal">
-    <h1><?php echo $this->mensaje;?></h1>
+    <h1 class="text-center"><?php echo $this->mensaje;?></h1>
     
     <?php echo $this->mensajeResultado ?>
 
