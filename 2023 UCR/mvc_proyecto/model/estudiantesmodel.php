@@ -40,6 +40,7 @@ class EstudiantesModel extends Model{
             //code...
             $datos['id'] = "0";
             $datos['usuario'] = "Benavides";
+            $datos['idCarreras'] = "12";
             $stringSQL = 'INSERT INTO estudiante(id, cedula, correoelectronico, telefono, telefonocelular, 
             fechanacimiento, sexo, direccion, direccion, nombre, apellidopaterno, apellidomaterno, 
             nacionalidad, idCarreras, usuario) VALUES ( :id, :cedula, :correoelectronico, :telefono, 
