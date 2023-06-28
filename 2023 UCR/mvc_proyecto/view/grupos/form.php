@@ -10,7 +10,6 @@
   <input type="text"
     class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre del grupo"
     value="<?php echo isset($this->datos->nombre)? $this->datos->nombre :"";?>">
-  <small id="helpId" class="form-text text-muted">Ingrese el nombre del grupo</small>
 </div>
 <div class="mb-3">
             <button type="submit" class="btn btn-primary">Salvar</button>
