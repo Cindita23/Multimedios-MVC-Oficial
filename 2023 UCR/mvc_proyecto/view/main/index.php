@@ -62,7 +62,7 @@ require 'view/menu.php';
                                     <div class="card-body">
                                         <h3 class="card-title fw-bold mb-3 text-center">Bibliotecas</h3>
                                         <p class="card-text text-center">
-                                            ¡Bienvenido al innovador mundo del conocimiento en el Instituto Cyber! Aquí en nuestro
+                                            ¡Bienvenido al innovador mundo del conocimiento en el Instituto Cyber B! Aquí en nuestro
                                             instituto,
                                             no solo se basa en la tecnología y la informática, sino que también valoramos la riqueza y el
                                             poder de la palabra impresa. Es por eso que nos enorgullece presentarte nuestras modernas
