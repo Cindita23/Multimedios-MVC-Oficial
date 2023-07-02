@@ -45,7 +45,7 @@ class UsuariosModel extends Model{
         try {
             //code... 
             $datos['id'] = "0";  
-            $pass = md5($datos->password);     
+            $pass = md5($datos['password']);     
             $datos['password'] = $pass;       
 
             $stringSQL = "INSERT INTO user(id, name, email, password) VALUES ( :id, :name, :email, :password);";
@@ -88,6 +88,8 @@ class UsuariosModel extends Model{
         //            var_dump($datos);
         try {
             //code...{}
+            $pass = md5($datos['password']);     
+            $datos['password'] = $pass; 
             $stringSQL = 'UPDATE user SET name=:name,email=:email,password=:password WHERE id=:id ;';
             $query = $this->db->connect()->prepare($stringSQL);
             $query->execute($datos);

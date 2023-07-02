@@ -12,7 +12,7 @@
 </div>
 <div class="mb-3">
   <label for="" class="form-label">Password</label>
-  <input type="text" required class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="Ingrese la contraseña del usuario" value="<?php echo isset($this->datos->password) ? $this->datos->password : ""; ?>">
+  <input type="password" required class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="Ingrese la contraseña del usuario" value="<?php echo isset($this->datos->password) ? $this->datos->password : ""; ?>">
 </div>
 <div class="mb-3">
   <button type="submit" class="btn btn-primary">Salvar</button>
