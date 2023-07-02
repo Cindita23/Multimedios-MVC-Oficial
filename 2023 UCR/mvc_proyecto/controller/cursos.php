@@ -33,7 +33,7 @@ class Cursos extends Controller{
         if ($this->model->insertarCurso($_POST)){//todo lo que venga en el POST lo vamos a enviar 
             $mensajeResultado = $mensajePersonalizado->mensajeExitosoInsertar;
         }else{
-            $mensajeResultado = $mensajePersonalizado->mensajeExitosoInsertar;
+            $mensajeResultado = $mensajePersonalizado->mensajeErrorInsertar;
         }
         $this->view->mensajeResultado = $mensajeResultado;        
         $this->render();
