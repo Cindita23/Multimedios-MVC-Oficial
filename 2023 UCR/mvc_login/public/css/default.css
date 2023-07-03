@@ -5,3 +5,15 @@
 .colorFondo{
     background-color: rgb(186, 207, 241);
 }
+
+.dropdown-item:hover {
+    background-color: rgb(110, 108, 108);
+    color: white;
+    font-weight: bold;
+}
+
+.aumentarLetra:hover,
+.aumentarLetra:focus {
+    font-size: 18px;
+    color: white;
+}
