@@ -17,7 +17,7 @@ require 'view/menu.php';
                     <div class="carousel-item active">
                         <img src="public/img/Inicio/Carrusel1.jpeg" class="w-100 d-block" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1 class="fw-bold">Cyber B</h1>
+                            <h1 class="fw-bold">Universidad DC</h1>
                             <p>Ofrecemos distintas carreras que se ajustan a tus sueños.</p>
                         </div>
                     </div>
