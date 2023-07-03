@@ -8,7 +8,7 @@ es para cuando hago el login y este ahí, nos devuelva una respuesta satisfactor
 -->
 
 <?php
-require_once "usuariosmodel.php";
+// require_once "usuariosmodel.php";
 class Session
 {
     function __construct()
