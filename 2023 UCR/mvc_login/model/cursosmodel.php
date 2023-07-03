@@ -8,7 +8,6 @@ class CursosModel extends Model{
     public function __construct(){//inicializo contructor 
         parent::__construct();//inicializo lo que el tiene heredaro, del archivo model
     }
-
     //podemos usar nombres genéricos para saber lo que estamos llamando 
     public function getCursos(){
         $items = []; //los arreglos vacíos me sirven para manejar estructuras dinámicasindiferentemente en el lenguaje de programación que esté 
@@ -43,9 +42,11 @@ class CursosModel extends Model{
     public function insertarCurso($datos){
 //# INSERT INTO curso(id, nombre, descripcion, tiempo, usuario) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
         try {
-            //code...
+            //code..
+            
             $datos['id'] = "0";//---de todas formas el id se agrega en BD, este es solo para que no se caiga--
-            $datos['usuario'] = "Benavides";//-ESTO AHY QUE CONECTARLO CON EL LOGIN DESPUÉS-----
+            $username = $_SESSION['name'];
+            $datos['usuario'] =  $username ;//-ESTO AHY QUE CONECTARLO CON EL LOGIN DESPUÉS-----
             $stringSQL = 'INSERT INTO curso(id, nombre, descripcion, tiempo, usuario) VALUES ( :id, :nombre, :descripcion, :tiempo, :usuario);';
             $query = $this->db->connect()->prepare($stringSQL);
             $query->execute($datos);
@@ -87,7 +88,8 @@ class CursosModel extends Model{
         try {
             //code... 
             //#UPDATE curso SET nombre='[value-2]',descripcion='[value-3]',tiempo='[value-4]',usuario='[value-5]' WHERE id='[value-1]'                     
-            $datos['usuario'] = "Prof Mario";
+            $username = $_SESSION['name'];
+            $datos['usuario'] =  $username ;
             $stringSQL = 'UPDATE curso SET nombre=:nombre,descripcion=:descripcion,tiempo=:tiempo,usuario=:usuario WHERE id=:id ;';
             $query = $this->db->connect()->prepare($stringSQL);
             $query->execute($datos);

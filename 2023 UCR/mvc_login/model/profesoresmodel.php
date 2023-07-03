@@ -66,7 +66,8 @@ class ProfesoresModel extends Model{
         try {
             //code...
             $datos['id'] = "0";
-            $datos['usuario'] = "Benavides";
+            $username = $_SESSION['name'];
+            $datos['usuario'] =  $username ;
             $stringSQL = 'INSERT INTO profesor(id, cedula, correoelectronico, telefono, telefonocelular, 
             fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, 
             nacionalidad, usuario, idCarreras) VALUES ( :id, :cedula, :correoelectronico, :telefono, 
@@ -118,7 +119,8 @@ class ProfesoresModel extends Model{
             #telefonocelular='[value-5]',fechanacimiento='[value-6]',sexo='[value-7]',direccion='[value-8]',
             #nombre='[value-9]',apellidopaterno='[value-10]',apellidomaterno='[value-11]',
             #nacionalidad='[value-12]',usuario='[value-13]',idcarreras='[value-14]' WHERE id='[value-1]'               
-            $datos['usuario'] = "Benavides";
+            $username = $_SESSION['name'];
+            $datos['usuario'] =  $username ;
             $stringSQL = 'UPDATE profesor SET cedula=:cedula,correoelectronico=:correoelectronico,
                 telefono=:telefono,telefonocelular=:telefonocelular,fechanacimiento=:fechanacimiento,
                 sexo=:sexo,direccion=:direccion,nombre=:nombre,apellidopaterno=:apellidopaterno,

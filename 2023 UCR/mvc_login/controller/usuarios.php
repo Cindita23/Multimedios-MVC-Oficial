@@ -99,11 +99,17 @@ class Usuarios extends Controller
   {
     $id = $param[0];
     $mensajePersonalizado = new Misc();
+    $userId = $_SESSION['id'];
 
-    if ($this->model->eliminarUsuario($id)) {
-      $mensajeResultado = $mensajePersonalizado->mensajeEliminarExitoso;
+    if ($userId == $id) {
+      $mensajeResultado = $mensajePersonalizado->mensajeErrorUsuario;
     } else {
-      $mensajeResultado = $mensajePersonalizado->mensajeEliminarError;
+      if ($this->model->eliminarUsuario($id)) {
+        $mensajeResultado = $mensajePersonalizado->mensajeEliminarExitoso;
+      } else {
+        $mensajeResultado = $mensajePersonalizado->mensajeEliminarError;
+      }
+     
     }
     $this->view->mensajeResultado = $mensajeResultado;
     $this->render();
@@ -141,8 +147,8 @@ class Usuarios extends Controller
   {
     session_destroy();
     session_write_close();
-        
-    header("Location: " . constant('URL'));// Redireccionar a la página principal
+
+    header("Location: " . constant('URL')); // Redireccionar a la página principal
     exit();
   }
 
